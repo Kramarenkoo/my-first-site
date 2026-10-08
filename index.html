@@ -4,7 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мой первый сайт</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --primary-hover: #4338ca;
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+            --text-main: #1f2937;
+            --text-sec: #6b7280;
+            --footer-bg: #111827;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+            text-shadow: 0 0 5px rgba(79, 70, 229, 0.4);
+        }
+
+        main {
+            flex: 1;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            width: 100%;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--primary-color);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+        }
+
+        section p {
+            color: var(--text-sec);
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background-color: var(--footer-bg);
+            color: #9ca3af;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: auto;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -21,23 +141,23 @@
     <main>
         <section id="home">
             <h2>Главная страница</h2>
-            <p>Это мой первый HTML-проект под контролем версий Git.</p>
+            <p>Это мой первый HTML-проект под контролем версий Git. Я осваиваю веб-разработку и создаю свой цифровой след.</p>
         </section>
 
         <section id="about">
             <h2>О нас</h2>
-            <p>Мы изучаем Git и веб-разработку</p>
+            <p>Мы изучаем Git и веб-разработку, шаг за шагом превращая код в живые интерфейсы. Каждый проект — это новый навык и опыт.</p>
         </section>
         
         <section id="contact">
             <h2>Контакты</h2>
-            <p>Email: leshakram1@yandex.ru</p>
+            <p>Email: <a href="mailto:leshakram1@yandex.ru" style="color: var(--primary-color); text-decoration: underline;">leshakram1@yandex.ru</a></p>
         </section>
         
     </main>
     
     <footer>
-        <p>&copy; 2027, Крамаренко А.Д.</p>
+        <p>&copy; 2026, Крамаренко А.Д.</p>
     </footer>
 </body>
 </html>
